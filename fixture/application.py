@@ -1,6 +1,7 @@
 ﻿from selenium import webdriver
 from fixture.session import SessionHelper
 from fixture.project import ProjectHelper
+from fixture.james import JamesHelper
 
 
 class Application:
@@ -17,6 +18,7 @@ class Application:
         self.session = SessionHelper(self)
         self.baseUrl = baseUrl
         self.project = ProjectHelper(self)
+        self.james = JamesHelper(self)
 
     def is_valid(self):
         try:
