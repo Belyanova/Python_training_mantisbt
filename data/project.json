@@ -1,9 +1,9 @@
 [
   {
     "py/object": "model.Project.Configurations_Project",
-    "name": "nameyv",
+    "name": "name",
     "status": "obsolete",
-    "view": "private",
+    "view": "public",
     "description": "description",
     "id": null
   }
