@@ -7,7 +7,7 @@ class SoapHelper:
         self.app = app
 
     def can_login(self, username, password):
-        client = Client("http://localhost/mantisbt-1.2.20/api/soap/mantisconnect.php?wsdl")
+        client = Client(self.app.baseUrl + "/api/soap/mantisconnect.php?wsdl")
         try:
             client.service.mc_login(username, password)
         except WebFault:
@@ -15,5 +15,5 @@ class SoapHelper:
         return True
 
     def get_list_project(self,username, password):
-        client = Client("http://localhost/mantisbt-1.2.20/api/soap/mantisconnect.php?wsdl")
-        return  client.service.mc_projects_get_user_accessible(username, password)
+        client = Client(self.app.baseUrl + "/api/soap/mantisconnect.php?wsdl")
+        return client.service.mc_projects_get_user_accessible(username, password)
