@@ -45,4 +45,4 @@ class ProjectHelper:
         wd = self.app.wd
         wd.find_element_by_link_text(name).click()
         self.dell_project()
-        self.dell_project()
+        #self.dell_project()
